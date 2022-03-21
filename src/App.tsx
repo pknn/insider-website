@@ -1,15 +1,5 @@
-import { InjectedWebSocket, withWebSocket } from './core/webSocket'
+const App = () => <div>Vite React App</div>
 
-const App = (props: InjectedWebSocket) => {
-  const handleClick = () => {
-    props.webSocket.send('hello')
-  }
-  return (
-    <div>
-      <div>Vite React App</div>
-      <button onClick={handleClick}>Send</button>
-    </div>
-  )
-}
+App.displayName = 'App'
 
-export default withWebSocket(App)
+export default App
