@@ -1,11 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import App from './App'
+import { WebSocketContextProvider } from './core/webSocket'
+import './index.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <WebSocketContextProvider>
+      <App />
+    </WebSocketContextProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 )
